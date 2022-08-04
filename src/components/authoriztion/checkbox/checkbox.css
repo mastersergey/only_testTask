@@ -1,0 +1,32 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox__custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 14px;
+}
+
+.checkbox__custom::before {
+  content: '';
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-52%, -52%);
+  display: block;
+  background: #4a67ff;
+  border-radius: 2px;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: .1s;
+}
+
+.checkbox:checked + .checkbox__custom::before {
+  opacity: 1;
+}
